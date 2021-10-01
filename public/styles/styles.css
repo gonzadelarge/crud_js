@@ -1,0 +1,549 @@
+/* Fuente */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* Variables */
+
+:root {
+    --color-primario-Oscuro: #000633;
+    --color-primario-Violeta: #5028D2;
+    --color-primario-Verde: #38E5A6;
+    --color-primario-Blanco: #ffffff;
+    --color-primario-Neutro:#ececec;
+
+    --color-secundario-Oscuro: #0006335e;
+    --color-secundario-Violeta: #5028d260;
+    --color-secundario-Verde: #38e5a6b0;
+    --color-secundario-Blanco: #ffffff70;
+    --color-secundario-Neutro:#ecececc0;
+
+    --color-formulario-Error: #f06565;
+    --color-formulario-Correcto: #30f161;
+}
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IBM Plex Sans", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+
+
+
+/* ///////////////////////// ------ ATRIBUTOS COMUNES ----- /////////////////////////  */
+
+
+
+html {
+    font-size: 16px;
+}
+body {
+    color: var(--color-primario-Oscuro);
+    background-color: var(--color-primario-Blanco);
+}
+a {
+    color: var(--color-primario-Blanco);
+}
+p {
+    font-size: .8rem;
+    margin: .5rem 0;
+}
+button {
+    margin: 0;
+    background-color: var(--color-secundario-Violeta);
+    color: var(--color-primario-Blanco);
+    box-shadow: 0 0 8px 0 var(--color-secundario-Violeta);
+    border: none;
+    border-radius: 12px;
+    padding: .5rem 1rem;
+    cursor: pointer;
+}
+img {
+    width: 100%;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+}
+
+
+/* ///////////////////////// ------ CONTENEDOR PRINCIPAL ----- /////////////////////////  */
+
+
+.c-principal {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ///////////////////////// ------ CONTENEDOR OCULTO ----- /////////////////////////  */
+
+.c-alerta {
+    height: 40vh!important;
+}
+
+.c-alerta.active {
+    left: 0;
+}
+.alerta {
+    text-align: center;
+}
+
+/* ///////////////////////// ------ HEADER ----- /////////////////////////  */
+
+/* ---- Contenedor ---- */
+
+.c-header {
+    width: 100%;
+    background-color: var(--color-secundario-Neutro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .8rem 1rem;
+}
+
+
+.c-boton {
+    z-index: 200;
+}
+.c-imagen-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--color-secundario-Violeta);
+    cursor: pointer;
+}
+
+.boton-menu {
+    font-size: 30px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.c-imagen-avatar {
+    background-color: transparent;
+}
+
+
+/* ///////////////////////// ------ MENU ----- /////////////////////////  */
+
+.c-menu {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 99;
+    background-color: var(--color-primario-Neutro);
+    width: 0;
+    height: 100vh;
+    padding: 1rem 0;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    transition: all .9s;
+}
+.c-menu.active {
+    left: 0;
+    width: 100%;
+}
+.m-titulo {
+    width: 80%;
+    margin-top: 5rem;
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--color-primario-Violeta);
+    border-top: 1px solid var(--color-primario-Violeta);
+    color: var(--color-primario-Oscuro);
+}
+.m-entrada {
+    width: 80%;
+    margin-top: 3rem;
+    padding: .5rem 0;
+    font-size: .8rem;
+    border-radius: 20px;
+    text-align: center;
+    background-color: var(--color-secundario-Violeta);
+    color: var(--color-primario-Blanco);
+}
+
+.m-entrada h3 {
+    font-size: .9rem;
+    font-weight: 200;
+}
+.bold {
+    background-color: var(--color-primario-Violeta);
+}
+
+
+/* ///////////////////////// ------ CONTENIDO PRINCIPAL ----- /////////////////////////  */
+
+.c-contenido-principal {
+    width: 100%;
+}
+
+/* ///////////////////////// ------ INTERFAZ ----- /////////////////////////  */
+
+.c-interfaz {
+    width: 100%;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.c-interfaz h1 {
+    font-size: 3rem;
+    font-weight: 200;
+    margin: .2rem 0;
+}
+.c-interfaz h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    margin-top: 2rem;
+}
+
+.c-interfaz button {
+    width: 60%;
+    margin: 1.5rem 0;
+    padding: .5rem;
+}
+
+.interfaz-filtros {
+    position: relative;
+    width: 90%;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+.interfaz-filtros input {
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    padding: .1rem .9rem;
+    box-shadow: 0 0 10px 8px var(--color-secundario-Neutro);
+}
+
+/* ///////////////////////// ------ TABLA PRINCIPAL ----- /////////////////////////  */
+
+.c-tabla-principal {
+    width: 100%;
+}
+
+.c-contenido-tabla {
+    position: relative;
+    background-color: var(--color-secundario-Neutro);
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.c-contenido-tabla p {
+    margin: .2rem 0;
+}
+
+.contenido-tabla-principal {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.c-btn-toggle {
+    font-size: 25px;
+    color: var(--color-secundario-Violeta);
+    cursor: pointer;
+}
+
+.d-none {
+    display: none;
+}
+.d-none.active {
+    display: inline;
+}
+
+.c-btn-tabla {
+    margin-top: 1rem;
+}
+
+.c-btn-tabla .fas {
+    font-size: 20px;
+    color: var(--color-secundario-Violeta);
+    cursor: pointer;
+    margin-right: .8rem;
+    margin-top: .5rem;
+}
+
+/* ///////////////////////// ------ FORMULARIO ----- /////////////////////////  */
+
+.c-oculto {
+    position: fixed;
+    top: 100px;
+    left: -200%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 80%;
+    height: 60vh;
+    background-color: var(--color-primario-Blanco);
+    border-radius: 20px;
+    box-shadow: 0 0 20px 10px var(--color-secundario-Neutro);
+    z-index: 1000;
+    transition: all .9s;
+}
+
+.c-oculto.active {
+    left: 0;
+}
+
+.c-header-formulario {
+    width: 80%;
+    margin: .5rem auto;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.titulo-formulario h2 {
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+.boton-formulario {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--color-secundario-Violeta);
+}
+
+.formulario {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.i-cliente {
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    padding: .5rem .9rem;
+    margin: .6rem 0;
+    box-shadow: 0 0 20px 5px var(--color-secundario-Neutro);
+}
+.f-completed label {
+    font-size: .8rem;
+    font-weight: 200;
+    margin-left: .5rem;
+}
+
+input[type="submit"] {
+    margin: 0;
+    background-color: var(--color-secundario-Violeta);
+    color: var(--color-primario-Blanco);
+    box-shadow: 0 0 8px 0 var(--color-secundario-Violeta);
+    border: none;
+    border-radius: 12px;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.mensaje-error {
+    width: 100%;
+    margin-top: 1rem;
+    padding: .2rem 0;
+    background-color: var(--color-formulario-Error);
+    border-radius: 12px;
+    color: var(--color-primario-Blanco);
+    text-align: center;
+}
+.mensaje-error p {
+    font-size: .7rem;
+}
+
+/* ///////////////////////// ------ HOVERS ----- /////////////////////////  */
+
+button:hover {
+    background-color: var(--color-primario-Violeta);
+}
+
+input[type="submit"]:hover {
+    background-color: var(--color-primario-Violeta);
+}
+
+.c-btn-toggle:hover {
+    color: var(--color-primario-Violeta);
+}
+
+.boton-menu:hover {
+    color: var(--color-primario-Violeta);
+}
+
+.special {
+    display: none;
+}
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////
+                        COMIENZA ANCHO DE TABLET
+///////////////////////////////////////////////////////////////////////////////////////  */
+
+
+
+
+
+
+
+@media all and (min-width: 760px) {
+
+
+    /* ///////////////////////// ------ CONTENEDOR PRINCIPAL ----- /////////////////////////  */
+
+    .c-principal {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    /* ///////////////////////// ------ MENU ----- /////////////////////////  */
+
+    .c-menu {
+        position: relative;
+        background-color: var(--color-secundario-Neutro);
+    }
+
+    .c-menu.active {
+        width: 25%;
+    }
+    .m-titulo {
+        margin-top: 1rem;
+    }
+
+    .m-entrada {
+        width: 80%;
+        margin-top: 1.5rem;
+        padding: .4rem 0;
+    }
+
+    /* ///////////////////////// ------ INTERFAZ ----- /////////////////////////  */
+
+
+    .c-interfaz button {
+        max-width: 20%;
+    }
+
+    .interfaz-filtros input {
+        width: 60%;
+    }
+
+
+    /* ///////////////////////// ------ CONTENIDO PRINCIPAL ----- /////////////////////////  */
+
+    .c-contenido-principal {
+       display: flex;
+    }
+
+    .c-btn-toggle {
+        display: none;
+        opacity: 0;
+    }
+    .d-none {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .d-none p {
+        width: 22%;
+    }
+
+    .c-btn-tabla {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 20%;
+        margin: 0;
+    }
+
+    .c-btn-tabla .fas {
+        font-size: 20px;
+        color: var(--color-secundario-Violeta);
+        margin: 0 .5rem;
+        cursor: pointer;
+    }
+
+    .c-contenido-tabla {
+        position: relative;
+        background-color: var(--color-secundario-Neutro);
+        margin: 1rem auto;
+        padding: 1rem;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contenido-tabla-principal {
+        width: 15%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* ///////////////////////// ------ FORMULARIO ----- /////////////////////////  */
+
+    .c-oculto {
+        width: 60%;
+        height: 70vh;
+        top: 0;
+    }
+
+    .c-header-formulario {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 3rem;
+    }
+
+    .formulario {
+        margin: 1rem auto;
+        padding-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .i-cliente {
+        box-shadow: 0 0 20px 10px var(--color-primario-Neutro);
+    }
+
+}
+
+.fas:hover {
+    color: var(--color-primario-Violeta);
+}
+
+.nada {
+    display: none;
+}

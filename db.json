@@ -1,0 +1,46 @@
+{
+  "clientes": [
+    {
+      "nombre": "Miguel Hernandez",
+      "email": "micalet94@gmail.com",
+      "telefono": "680 34 07 09",
+      "empresa": "Cabalas del mensajero",
+      "id": 1623521281405
+    },
+    {
+      "nombre": "Jesús Calvo",
+      "email": "jesucmartin@gmail.com",
+      "telefono": "610 86 64 54",
+      "empresa": "Madrigal SA",
+      "id": 1623521659299
+    },
+    {
+      "nombre": "Diego",
+      "email": "etanolmusic@gmail.com",
+      "telefono": "666 666 666",
+      "empresa": "Etanol Warzone",
+      "id": 1623521690091
+    },
+    {
+      "nombre": "Mohi",
+      "email": "mohi@hub.es",
+      "telefono": "666 666 666",
+      "empresa": "Upgrade",
+      "id": 1628937024459
+    },
+    {
+      "nombre": "Trigo",
+      "email": "trigo@hub.es",
+      "telefono": "7777",
+      "empresa": "Upgrade",
+      "id": 1628941313317
+    },
+    {
+      "nombre": "Gonzalo Calvo",
+      "email": "dominar@elmundo.com",
+      "telefono": "666 666 666",
+      "empresa": "Dominar el Mundo S.A",
+      "id": 1632837372275
+    }
+  ]
+}

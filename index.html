@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="public/styles/styles.css">
+    <script src="js/componentes/funciones-DOM.js"></script>
+    <script src="js/app.js" type="module"></script>
+    <script src="js/nuevoRegistro.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/0f65edafbd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="c-principal">
+
+        <div class="c-oculto c-alerta">
+            <div class="c-header-formulario">
+                <div class="titulo">¿Desea eliminar el cliente?</div>
+                <div class="c-boton"><i id="btn-ocultar-alerta" class="far fa-times-circle c-btn-toggle" style="opacity: 1;"></i></div>
+            </div>
+            <div class="formulario alerta">
+                <button id="yes" class="i-cliente">Si</button>
+                <button id="no" class="i-cliente">No</button>
+                <p>Esta acción no se puede deshacer</p>
+            </div>
+        </div>
+        <!-- Contenedor Formulario -->
+        <div class="c-oculto c-form">
+            <div class="c-header-formulario">
+                <div class="titulo-formulario"><h2></h2></div>
+                <div class="c-boton"><i id="btn-ocultar-form" class="far fa-times-circle c-btn-toggle" style="opacity: 1;"></i></div>
+            </div>
+            <form class="formulario" id="formulario">
+                <input class="i-cliente special" readonly type="text" id="idCliente" name="id">
+                <input class="i-cliente" type="text" id="nombre" name="nombre" placeholder="Nombre">
+                <input class="i-cliente" type="text" id="empresa" name="empresa" placeholder="Empresa">
+                <input class="i-cliente" type="text" id="email" name="email" placeholder="Email">
+                <input class="i-cliente" type="text" id="telefono" name="telefono" placeholder="Telefono">
+                <input type="submit" id="submit" value="Guardar cambios">
+            </form>
+        </div>
+
+        <!-- Header -->
+        <div class="c-header">
+            <div class="c-boton"><div id="btn-menu" class="boton-menu"><i class="fas fa-bars"></i></div></div>
+            <div class="c-imagen-avatar"><a href="index.html"><img src="public/img/ICONO_GDL_OSCURO.png" alt=""></a></div>
+        </div>
+
+        <!-- Contenido Principal -->
+        <div class="c-contenido-principal">
+
+            <!-- Menu -->
+            <div class="c-menu">
+                <div class="m-titulo"><h2>Base Datos Gonzalo</h2></div>
+                <div class="m-entrada bold"><h3>Clientes</h3></div>
+                <div class="m-entrada"><h3>Proyectos</h3></div>
+            </div>
+
+            <!-- Tabla principal -->
+            <div class="c-tabla-principal">
+
+                <!-- Interfaz -->
+                <div class="c-interfaz">
+                    <h1>Clientes</h1>
+                    <button id="btn-crear-registro">Create New</button>
+                    <div class="interfaz-filtros">
+                        <i class="fas fa-search search-icon"></i>
+                        <input class="input-filtro" type="text" id="search" name="search" placeholder="Búsqueda">
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </div>
+</body>
+</html>
